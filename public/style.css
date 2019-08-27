@@ -41,7 +41,7 @@ button {
 .signup{
     background-color: #b49c9c;
     text-align: center;
-  width: 25%;
+  /* width: 25%; */
   text-decoration: none;
   padding: 15px;
   margin : 20px 0;
