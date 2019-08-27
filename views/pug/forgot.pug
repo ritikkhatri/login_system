@@ -1,0 +1,28 @@
+html
+  head
+    title FCC Advanced Node and Express
+    meta(name='description', content='Profile')
+    link#favicon(rel='icon', href='https://hyperdev.com/favicon-app.ico', type='image/x-icon')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/public/style.css')
+  body
+    //add your code below, make sure its indented at this level
+    
+    
+    div(class='container')
+            h2  Forgot Password
+            form(action='/reset', method='post')
+                    div
+                    label Username:
+                    input(type='text', name='username',required=true)
+                    div
+                    label Password:
+                    input(type='password', name='password' ,required=true)  
+                    div
+                    button(type='submit')     Submit 
+            if notFound 
+                p User Not Find    
+    script(src='https://code.jquery.com/jquery-2.2.1.min.js', integrity='sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=', crossorigin='anonymous')
+    script(src='/public/client.js')

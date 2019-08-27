@@ -1,0 +1,68 @@
+html
+  head
+    title FCC Advanced Node and Express
+    meta(name='description', content='A cool thing made with HyperDev')
+    link#favicon(rel='icon', href='https://hyperdev.com/favicon-app.ico', type='image/x-icon')
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='/public/style.css')
+  body
+   
+    //- p#pug-variable= message
+    div(class='container')
+        if succes 
+          h2 Password Succesful Change Please Log In
+        
+        if showLogin
+          
+          h1 Login Form
+
+          
+          form(action='/login', method='post')
+            div
+              label(for='uname') Username:
+              br
+              input(type='text', name='username' required=true)
+              br
+
+              label(for='psw') Password:
+              br
+              input(type='password', name='password' required=true)
+              br
+              button(type='submit') Log In
+              
+          //- button(onclick='/register', class='signup')
+          if wrong 
+                h2 Wrong Password or Username  
+          div(class='signup' ) 
+              a(href='/register', ) Sign Up
+          //- br    
+          
+          div(class='signup') 
+              a(href='/forgot'  ) Forgot password 
+          //- br
+            
+        if showRegistration
+          hr
+          h2 Register here
+          form(action='/register', method='post')
+            div
+              label(for='uname') Username:
+              input(type='text', name='username',required=true  )
+            div
+              label(for='uname') Name:
+              input(type='text', name='name' ,required=true)
+            div
+              label(for='uname')   Email:
+              input(type='text', name='email' ,required=true)
+            div
+              label(for='uname') Password:
+              input(type='password', name='password',required=true )
+            div
+              button(type='submit', value='Register')
+          a(href='/') Log In
+          if exist   
+              p User Exist please change username 
+    script(src='https://code.jquery.com/jquery-2.2.1.min.js', integrity='sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=', crossorigin='anonymous')
+    script(src='/public/client.js')
