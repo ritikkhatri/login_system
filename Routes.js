@@ -86,7 +86,7 @@ app.route('/profile')
     username : req.user.username
   },(err,user)=>{
     console.log(user)
-    res.render(process.cwd() + '/views/pug/profile.pug', {title: 'Profile Home', message: 'Please login', showLogin: false , username :user.name});  
+    res.render(process.cwd() + '/views/pug/profile.pug', {title: 'Profile Home', message: 'Please login', showLogin: false , username :user.name,email :user.email});  
   })
 // res.render(process.cwd() + '/views/pug/profile.pug', {title: 'Profile Home', message: 'Please login', showLogin: false , username :req.user.username});  
 });
